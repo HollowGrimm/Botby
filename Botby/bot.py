@@ -5,16 +5,10 @@ import asyncio
 import random
 
 token = config.token
-<<<<<<< HEAD
 cp = ">"
 
 description = "I've returned to serve."
 bot = commands.Bot(command_prefix = cp, description=description)
-=======
-
-description = "I've returned to serve."
-bot = commands.Bot(command_prefix = '>', description=description)
->>>>>>> main
 
 # ===Setup===
 
@@ -47,7 +41,6 @@ async def on_message(message):
 
     message_string = message.content.lower()
 
-<<<<<<< HEAD
     if message_string.strip()[0] == cp:
         print(f"@{author_name} with ID: {author_id} sent a command.")
     else:
@@ -67,17 +60,6 @@ async def on_message(message):
 
     await bot.process_commands(message)
 
-=======
-    print(f"@{author_name} with ID: {author_id} sent a message.")
-
-    n = random.randint(0, 1)
-        
-    if n == 1 and message_string.strip()[-4:] == "lies" and author_id != bot.user.id:
-        await message.channel.send("and deceit")
-
-    # @mentions == (mention = f"<@!{author_id}>")
-
->>>>>>> main
 # ===Bot Start===
 
 bot.run(token)
