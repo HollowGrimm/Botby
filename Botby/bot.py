@@ -41,20 +41,25 @@ async def on_message(message):
 
     message_string = message.content.lower()
 
-    if message_string.strip()[0] == cp:
-        print(f"@{author_name} with ID: {author_id} sent a command.")
-    else:
-        print(f"@{author_name} with ID: {author_id} sent a message.")
-  
-    if message_string.strip()[-4:] == "lies" and author_id != bot.user.id:
-        await message.channel.send("and deceit")
+    if message_string.strip()[0] != cp:
+        if message_string.strip()[0] == cp:
+            print(f"@{author_name} with ID: {author_id} sent a command.")
+        else:
+            print(f"@{author_name} with ID: {author_id} sent a message.")
+    
+        if message_string.strip()[-4:] == "lies" and author_id != bot.user.id:
+            await message.channel.send("and deceit")
 
-    if message_string.strip()[-11:] == "nukes ready" and author_id != bot.user.id:
-        await message.channel.send("it's time boys")
-        
-    n = random.randint(1, 100)
-    if n == 69 and author_id == 420348710095159317:
-        await message.channel.send("Kaitlyn is a furry, change my mind.")
+        if message_string.strip()[-11:] == "nukes ready" and author_id != bot.user.id:
+            await message.channel.send("it's time boys")
+            
+        n1 = random.randint(1, 100)
+        if n1 == 69 and author_id == 420348710095159317:
+            await message.channel.send("Kaitlyn is a furry, change my mind.")
+
+        n2 = random.randint(1, 20)
+        if n2 == 1:
+            await message.channel.send("King Dragon sends his regards.")
 
     # @mentions == (mention = f"<@!{author_id}>")
 
