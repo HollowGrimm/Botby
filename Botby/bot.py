@@ -61,6 +61,9 @@ async def on_message(message):
         if n2 == 1:
             await message.channel.send("King Dragon sends his regards.")
 
+        if n2 == 2:
+            await message.channel.send("*you right*")
+
     # @mentions == (mention = f"<@!{author_id}>")
 
     await bot.process_commands(message)
