@@ -29,7 +29,13 @@ async def help(ctx):
     await ctx.send("No.")
 
 @bot.command()
+async def version(ctx):
+    """This function tells you the live version number"""
+    await ctx.send("1.6.1")
+
+@bot.command()
 async def roll(ctx, *, dice: str):
+    '''This function rolls a dice of your choosing'''
     if dice.lower().strip()[0] == "d":
         n = int(dice.strip()[1] + dice.strip()[2])
         r = random.randint(1, n)
