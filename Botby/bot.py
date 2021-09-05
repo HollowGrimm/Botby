@@ -78,8 +78,8 @@ async def on_message(message):
             await message.channel.send("it's time boys")
             
         n = random.randint(1, 100)
-        if n == 69 and author_id == 420348710095159317:
-            await message.channel.send("Kaitlyn is a furry, change my mind.")
+        '''if n == 69 and author_id == 420348710095159317:
+            await message.channel.send("Kaitlyn is a furry, change my mind.")'''
 
         if n == 1:
             await message.channel.send("King Dragon sends his regards.")
