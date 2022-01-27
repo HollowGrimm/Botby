@@ -31,7 +31,7 @@ async def help(ctx):
 @bot.command()
 async def version(ctx):
     """This function tells you the live version number"""
-    await ctx.send("1.6.1")
+    await ctx.send("1.8.0")
 
 @bot.command()
 async def roll(ctx, *, dice: str):
