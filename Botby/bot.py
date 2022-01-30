@@ -31,7 +31,7 @@ async def help(ctx):
 @bot.command()
 async def version(ctx):
     """This function tells you the live version number"""
-    await ctx.send("1.8.0")
+    await ctx.send("1.8.1")
 
 @bot.command()
 async def roll(ctx, *, dice: str):
@@ -76,6 +76,9 @@ async def on_message(message):
 
         if message_string.strip()[-11:] == "nukes ready" and author_id != bot.user.id:
             await message.channel.send("it's time boys")
+
+        if message_string.strip()[-5:] == "bruno" and author_id != bot.user.id:
+            await message.channel.send("We don't talk about Bruno, no, no, no...")
             
         n = random.randint(1, 100)
         '''if n == 69 and author_id == 420348710095159317:
